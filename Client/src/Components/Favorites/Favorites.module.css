@@ -64,6 +64,6 @@
   @media (max-width: 768px) {
     .selectors {
       margin-top: 150px;
-      grid-template-columns: 80px 80px 80px 50px;
+      grid-template-columns: 100px 100px 100px 90px;
     }
   }
