@@ -8,7 +8,7 @@ export default function LandingPage({ login }) {
     <>
     <div className={style.logo}>
         <img src={Logo}></img>
-        <h3 className={style.by}>By Maxi Valli</h3>
+        <h3 className={style.by}>By Santi</h3>
       </div>
     <div className={style.container}>
         <Form login={login}></Form>
