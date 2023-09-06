@@ -1,0 +1,156 @@
+.container {
+    display: grid;
+    justify-content: center;
+    height: 60px;
+  }
+  
+  .navbar {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    position: fixed;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 90px;
+    background-color: rgba(45, 45, 45, 0.699);
+    z-index: 9999;
+
+    border-top: 5px solid transparent;
+    background: linear-gradient(black, black) padding-box,
+    linear-gradient(45deg, #FF52E5, #F6D242) border-box;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    margin-left: 10px;
+  }
+  
+  .logo img {
+    width: 90px;
+  }
+  
+  .homeButton {
+    color: aliceblue;
+    margin-right: 10px;
+    cursor: pointer;
+    color: blueviolet;
+    align-self: baseline;
+    text-decoration: none;
+    transition: 200ms;
+    margin-right: 30px;
+  }
+  
+  .homeButton:hover {
+    text-shadow: 0px 0px 10px blueviolet;
+    scale: 0.9;
+  }
+  
+  .aboutButton {
+    color: aliceblue;
+    cursor: pointer;
+    color: blueviolet;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: 200ms;
+    margin-right: 30px;
+  }
+  
+  .aboutButton:hover {
+    text-shadow: 0px 0px 10px blueviolet;
+    scale: 0.9;
+  }
+  
+  .logoutButton {
+    color: aliceblue;
+    cursor: pointer;
+    color: fuchsia;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: 200ms;
+  }
+  
+  .logoutButton:hover {
+    text-shadow: 0px 0px 10px violet;
+    scale: 0.9;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      height: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 50px 50px 50px;
+    }
+  
+    .logo {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+    }
+  
+    .logo img {
+      margin: 0;
+      align-self: center;
+    }
+  
+    .buttons {
+      display: flex;
+      justify-self: center;
+      align-self: center;
+      gap: 20px;
+    }
+  
+    .favButton {
+      display: grid;
+      margin: 0;
+      font-size: 10px;
+      background-color: rgb(131, 181, 30);
+      width: 65px;
+      height: 30px;
+      border-radius: 5px;
+      align-content: center;
+      justify-self: center;
+      color: aliceblue;
+    }
+  
+    .homeButton {
+      display: grid;
+      margin: 0;
+      font-size: 10px;
+      background-color: blueviolet;
+      width: 65px;
+      height: 30px;
+      border-radius: 5px;
+      align-content: center;
+      justify-self: center;
+      color: aliceblue;
+    }
+  
+    .aboutButton {
+      display: grid;
+      margin: 0;
+      font-size: 10px;
+      background-color: blueviolet;
+      width: 65px;
+      height: 30px;
+      border-radius: 5px;
+      align-content: center;
+      justify-self: center;
+      color: aliceblue;
+    }
+  
+    .logoutButton {
+      display: grid;
+      margin: 0;
+      font-size: 10px;
+      background-color: fuchsia;
+      width: 65px;
+      height: 30px;
+      border-radius: 5px;
+      align-content: center;
+      justify-self: center;
+      color: aliceblue;
+    }
+  }

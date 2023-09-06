@@ -1,0 +1,163 @@
+.searchBar {
+    display: grid;
+    justify-self: center;
+    align-content: center;
+    align-self: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 450px;
+    height: 50px;
+    border-radius: 10px;
+  }
+  
+  .searchBar input {
+    width: 250px;
+    height: 35px;
+    font-size: 14px;
+    font-family: "Orbitron";
+    align-self: center;
+    border-radius: 5px;
+    background-color: rgb(245, 245, 245);
+    border: 0;
+    outline: none;
+  }
+  
+  .search {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    align-content: center;
+    background-color: blueviolet;
+    color: aliceblue;
+    margin-left: 10px;
+    border-radius: 50%;
+    border: 0;
+  }
+  
+  .search:hover {
+    scale: 0.9;
+    background-color: violet;
+    box-shadow: 0px 0px 5px blueviolet;
+  }
+  
+  .search img {
+    width: 27px;
+  }
+  
+  .music {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    align-content: center;
+    background-color: rgb(135, 70, 196);
+    box-shadow: 0px 0px 5px violet;
+    color: aliceblue;
+    margin-left: 10px;
+    border-radius: 50%;
+    border: 0;
+  }
+  
+  .music:hover {
+    scale: 0.9;
+    background-color: violet;
+    box-shadow: 0px 0px 5px blueviolet;
+  }
+  
+  .music img {
+    width: 27px;
+  }
+  
+  .random {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    align-content: center;
+    background-color: blueviolet;
+    color: aliceblue;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 0;
+  }
+  
+  .random:hover {
+    scale: 0.9;
+    background-color: violet;
+    box-shadow: 0px 0px 5px blueviolet;
+  }
+  
+  .random img {
+    width: 27px;
+  }
+  
+  @keyframes latido {
+    from {
+      transform: scale(0.7);
+    }
+    to {
+      transform: rotate(1.4);
+    }
+  }
+  
+  .favButton {
+    display: grid;
+  }
+  
+  .favButton button {
+    background-color: rgb(135, 70, 196);
+    box-shadow: 0px 0px 5px violet;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    margin-right: 10px;
+  }
+  
+  .favButton button:hover {
+    scale: 0.9;
+    background-color: violet;
+    box-shadow: 0px 0px 5px blueviolet;
+  }
+  
+  .favButton button img {
+    width: 27px;
+    padding-top: 5px;
+    animation: latido 1s linear infinite;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .rotating {
+    animation: rotate 2s linear infinite;
+    background-color: aquamarine;
+  }
+  
+  .rotating:hover {
+    scale: 0.9;
+    background-color: gray;
+    box-shadow: 0px 0px 5px gray;
+  }
+  
+  @media (max-width: 1280px) {
+    .searchBar {
+      width: 350px;
+    }
+    .searchBar input {
+      width: 150px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .searchBar {
+      margin-left: 0px;
+    }
+  
+    .searchBar input {
+      width: 150px;
+    }
+  }

@@ -1,0 +1,89 @@
+.component::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: url(../../Assets/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 30%;
+  }
+  
+  .component {
+    display: grid;
+    justify-self: center;
+    margin-top: 50px;
+    width: 300px;
+    height: 450px;
+    border-radius: 20px;
+    border: 5px solid transparent;
+    background: linear-gradient(rgb(15,15,15), rgb(15,15,15)) padding-box,
+    linear-gradient(45deg, #FF52E5, #F6D242) border-box;
+    margin-bottom: 30px;
+    transition: 200ms;
+  }
+  
+  .component:hover {
+    box-shadow: 3px 3px 20px #FF52E5, -3px -3px 20px #F6D242;
+  }
+  
+  .component img {
+    display: grid;
+    justify-self: center;
+    margin-top: 30px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid grey;
+    padding: 2px;
+    transition: 200ms;
+  }
+  
+  .name {
+    color: blueviolet;
+    font-size: 18px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    width: 95%;
+  }
+  
+  .data {
+    margin-top: -20px;
+    font-size: 14px;
+    font-weight: bolder;
+    align-self: center;
+    color: gray;
+  }
+  
+  .value {
+    color: aqua;
+  }
+  
+  .back {
+    display: grid;
+    justify-self: center;
+    width: 70px;
+    height: 30px;
+    background-color: blueviolet;
+    color: aliceblue;
+    font-family:'Orbitron';
+    font-size: 12px;
+    border: 0;
+    border-radius: 10px;
+    align-content: center;
+  }
+  
+  .back:hover {
+    scale: 0.9;
+    background-color: rgb(179, 120, 235);
+  }
+  
+  @media (max-width: 768px) {
+    .component {
+      margin-top: 70px;
+    }
+  }
