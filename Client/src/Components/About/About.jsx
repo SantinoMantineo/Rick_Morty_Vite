@@ -12,7 +12,7 @@ export default function About() {
       <div className={style.grid}>
         <div className={style.aboutImg}>
           <div>
-            <img src={Perfil}></img>
+            <img src={Perfil}  className={style.img}></img>
           </div>
           <div className={style.iconos}>
             <a href='https://www.instagram.com/santii_mantineo/' target="_blank"> <img src={Instagram} alt="instagram" className={style.logo}/> </a>
