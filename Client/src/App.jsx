@@ -19,6 +19,7 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import Favorites from "./components/Favorites/Favorites";
 //Importacion de estilos
 import style from "./App.module.css";
+import videoBg from "./assets/videoBG.mp4"
 
 function App() {
   //Para manejar la validación y el inicio de sesion
@@ -102,7 +103,6 @@ function App() {
           element={
             <>
               <LandingPage login={login} />
-              <Footer />
             </>
           }
         />
@@ -178,6 +178,7 @@ function App() {
         />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <video className={style.video} src={videoBg} autoPlay loop muted/>
     </div>
   );
 }
