@@ -11,7 +11,14 @@ export default function About() {
       <h2>ABOUT ME</h2>
       <div className={style.grid}>
         <div className={style.aboutImg}>
-          <img src={Perfil}></img>
+          <div>
+            <img src={Perfil}></img>
+          </div>
+          <div className={style.iconos}>
+            <a href='https://www.instagram.com/santii_mantineo/' target="_blank"> <img src={Instagram} alt="instagram" className={style.logo}/> </a>
+            <a href='mailto:santinomantineo.@gmail.com'> <img src={Gmail} alt="gmail" className={style.logo}/> </a>
+            <a href='https://github.com/SantinoMantineo' target="_blank"> <img src={Github} alt="github" className={style.logo}/> </a>
+          </div>
         </div>
         <div className={style.aboutP}>
           <h2>¿Quien Soy?</h2>
@@ -27,11 +34,6 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div>
-          {/* <a href='https://www.instagram.com/maxi.valli.aicardi/' target="_blank"> <img src={Instagram} alt="instagram" className={style.logo}/> </a>
-          <a href='mailto:maximilianovalli.sc@gmail.com'> <img src={Gmail} alt="gmail" className={style.logo}/> </a>
-          <a href='https://github.com/maxivalli' target="_blank"> <img src={Github} alt="github" className={style.logo}/> </a> */}
-        </div>
       </div>
   );
 }

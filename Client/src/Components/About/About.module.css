@@ -11,12 +11,24 @@
 }
 
 .aboutImg{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
+
 .P{
   color: white;
   text-align: start;
   font-size: xx-large;
+}
+
+.logo{
+  height: 50px;
+  width: auto;
+}
+
+.iconos{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1fr;
+  margin-left: 350px;
+  margin-top: 15px;
 }
