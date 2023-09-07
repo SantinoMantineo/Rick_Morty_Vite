@@ -1,83 +1,22 @@
-/* Ejemplo de una transición de opacidad */
-.transition-enter {
-    opacity: 0;
-  }
-  
-  .transition-enter-active {
-    opacity: 1;
-    transition: opacity 2000ms ease-in;
-  }
-  
-  .transition-exit {
-    opacity: 1;
-  }
-  
-  .transition-exit-active {
-    opacity: 0;
-    transition: opacity 2000ms ease-out;
-  }
-  
-  .aboutContainer::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 30%;
-  }
-  
-  .aboutContainer {
-    display: grid;
-    justify-self: center;
-    width: 300px;
-    height: 450px;
-    border-radius: 20px;
-    border: 5px solid transparent;
-    background: linear-gradient(rgb(15,15,15), rgb(15,15,15)) padding-box,
-    linear-gradient(45deg, #FF52E5, #F6D242) border-box;
-    transition: 200ms;
-  }
-  
-  .aboutContainer:hover {
-    box-shadow: 3px 3px 20px #FF52E5, -3px -3px 20px #F6D242;
-  }
-  
-  .perfil img {
-    padding: 2px;
-    margin-top: -35px;
-    width: 130px;
-    border-radius: 50%;
-    border: 3px solid grey;
-  }
-  
-  .aboutContainer h2 {
-    color: blueviolet;
-  }
-  
-  .text {
-    width: 90%;
-    justify-self: center;
-  }
-  
-  .text p {
-    display: grid;
-    color: white;
-    font-size: 13px;
-  }
-  
-  .logo {
-    width: 30px;
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-  
-  @media (max-width: 768px) {
-    .aboutContainer {
-      margin-top: 70px;
-    }
-  }
+.aboutContainer{
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom: 5px solid transparent;
+  background: linear-gradient(black, black) padding-box,
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.aboutImg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.P{
+  color: white;
+  text-align: start;
+  font-size: xx-large;
+}
