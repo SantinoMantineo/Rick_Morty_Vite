@@ -3,15 +3,16 @@ const axios = require('axios');
 const getCharById = (res, id)=>{
     axios(`https://rickandmortyapi.com/api/character/${id}`)
     .then((response) => response.data)
-    .then(({ name, gender, species, origin, image, status}) => {
+    .then(({ name, gender, species, origin, image, status, location}) => {
         const character = { 
         id: id,
         name: name, 
         gender: gender, 
         species: species,  
-        origin: origin.name, 
+        origin: origin, 
         image: image, 
-        status: status 
+        status: status,
+        location: location
      }
      return res
      .writeHead(200, { "Content-type": "application/json"})
