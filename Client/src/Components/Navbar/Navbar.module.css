@@ -14,7 +14,6 @@
     height: 90px;
     background-color: rgba(45, 45, 45, 0.699);
     z-index: 9999;
-
     border-top: 5px solid transparent;
     background: linear-gradient(black, black) padding-box,
     linear-gradient(45deg, #FF52E5, #F6D242) border-box;

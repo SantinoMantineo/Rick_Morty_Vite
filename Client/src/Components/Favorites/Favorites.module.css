@@ -5,7 +5,7 @@
     justify-content: center;
     height: 80px;
     grid-template-columns: 110px 110px 110px 80px;
-    gap: 20px;
+    gap: 25px;
     margin-top: 80px;
     background-color: rgba(0, 0, 0, 0.445);
     border-bottom: 5px solid transparent;
@@ -14,15 +14,14 @@
   }
   
   .selectors select {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    height: 35px;
-    width: 110px;
+    font-family: 'Rubik Iso', cursive;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    height: 40px;
+    width: 120px;
     align-self: center;
-    background-color: rgb(0, 0, 0);
     color: rgb(170, 104, 231);
-    font-family: 'Orbitron';
-    font-size: 12px;
+    font-size: 17px;
     padding-left: 5px;
     border-radius: 5px;
     font-weight: bolder;
@@ -33,24 +32,24 @@
   }
   
   .reset {
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin-top: 25px;
+    margin-bottom: 15px;
     width: 80px;
     height: 35px;
     align-self: center;
     border: 0;
-    background-color: rgba(0, 0, 0, 0.589);
     font-weight: bolder;
+    font-size: 17px;
     border-radius: 5px;
     justify-self: center;
-    font-family: 'Orbitron';
     color: rgb(170, 104, 231);
     border-radius: 20px;
     border: 5px solid transparent;
     background: linear-gradient(black, black) padding-box,
     linear-gradient(45deg, #FF52E5, #F6D242) border-box;
+    font-family: 'Rubik Iso', cursive;
   }
-  
+
   .reset:hover {
     scale: 0.9;
     background-color: rgb(170, 104, 231);

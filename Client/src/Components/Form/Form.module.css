@@ -17,7 +17,9 @@
   }
   
   h2 {
-    color: blueviolet;
+    background: -webkit-linear-gradient(45deg, #FF52E5, #F6D242) border-box;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     margin-top: 30px;
     margin-bottom: 50px;
   }
@@ -45,13 +47,14 @@
   }
   
   .submit {
-    font-size: 12px;
-    font-family: 'Orbitron';
     border: 0;
-    width: 70px;
-    height: 30px;
+    font-family: 'Rubik Iso', cursive;
+    font-weight: bolder;
+    font-size: x-large;
+    width: auto;
+    height: auto;
     border-radius: 10px;
-    background-color: blueviolet;
+    background-color: rgba(253, 92, 167, 0.589);
     color: aliceblue;
     transition: 200ms;
     margin-top: 50px;

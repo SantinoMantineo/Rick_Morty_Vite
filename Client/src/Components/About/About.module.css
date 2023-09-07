@@ -25,7 +25,6 @@
     height: 100%;
     width: 100%;
     z-index: -1;
-    background-image: url(../../Assets/2474215.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -67,16 +66,14 @@
   
   .text p {
     display: grid;
-    color: gray;
-    font-weight: bolder;
-    font-size: 12px;
+    color: white;
+    font-size: 13px;
   }
   
   .logo {
     width: 30px;
     margin-right: 20px;
     margin-left: 20px;
-    margin-bottom: 20px;
   }
   
   @media (max-width: 768px) {
