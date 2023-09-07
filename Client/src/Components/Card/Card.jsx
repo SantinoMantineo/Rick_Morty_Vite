@@ -101,7 +101,7 @@ function Card(props) {
         </h2>
       </div>
       <Link to={`/detail/${character.id}`}>
-        <button className={style.masInfo}>MAS INFO</button>
+        <button className={style.masInfo}>DETAILS</button>
       </Link>
     </div>
   );

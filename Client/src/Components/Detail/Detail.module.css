@@ -17,7 +17,7 @@
     justify-self: center;
     margin-top: 50px;
     width: 300px;
-    height: 450px;
+    height: 500px;
     border-radius: 20px;
     border: 5px solid transparent;
     background: linear-gradient(rgb(15,15,15), rgb(15,15,15)) padding-box,
@@ -37,25 +37,28 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 3px solid grey;
+    border: 3px solid rgba(43, 255, 0, 0.349);
     padding: 2px;
     transition: 200ms;
   }
   
   .name {
-    color: blueviolet;
-    font-size: 18px;
+    font-size: 20px;
     margin-top: -10px;
     margin-bottom: 10px;
-    width: 95%;
+    width: 100%;
+    font-weight: bolder;
+    background: -webkit-linear-gradient(45deg, #FF52E5, #F6D242) border-box;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
   }
   
   .data {
     margin-top: -20px;
-    font-size: 14px;
-    font-weight: bolder;
+    font-size: 18px;
     align-self: center;
-    color: gray;
+    color: rgb(255, 255, 255);
+    font-family: fantasy;
   }
   
   .value {
@@ -69,11 +72,13 @@
     height: 30px;
     background-color: blueviolet;
     color: aliceblue;
-    font-family:'Orbitron';
     font-size: 12px;
-    border: 0;
+    border: 2px solid transparent;
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.24)) padding-box,
+    linear-gradient(45deg, #FF52E5, #F6D242) border-box;
     border-radius: 10px;
     align-content: center;
+    font-weight: bolder;
   }
   
   .back:hover {

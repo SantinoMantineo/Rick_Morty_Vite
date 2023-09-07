@@ -1,12 +1,11 @@
 .container {
     display: grid;
     justify-self: center;
-    background-color: rgba(45, 45, 45, 0.9);
     width: 300px;
     height: 400px;
     border-radius: 20px;
     border: 5px solid transparent;
-    background: linear-gradient(black, black) padding-box,
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.24)) padding-box,
     linear-gradient(45deg, #FF52E5, #F6D242) border-box;
     margin-top: 50px;
     transition: 200ms;
@@ -41,8 +40,8 @@
   }
   
   .error {
-    color: gray;
-    font-size: 12px;
+    color: #ffffff;
+    font-size: 20px;
     width: 95%;
   }
   
@@ -54,10 +53,11 @@
     width: auto;
     height: auto;
     border-radius: 10px;
-    background-color: rgba(253, 92, 167, 0.589);
+    background-image: url(../../assets/background.jpg);
     color: aliceblue;
     transition: 200ms;
-    margin-top: 50px;
+    margin-top: 70px;
+    margin-bottom: 25px;
   }
   
   .submit:hover {

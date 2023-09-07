@@ -2,7 +2,7 @@
     box-sizing: border-box;
     display: grid;
     width: 250px;
-    height: 400px;
+    height: 500px;
     margin-bottom: 30px;
     transition: 200ms;
   }
@@ -33,16 +33,15 @@
     display: grid;
     width: 80px;
     height: 30px;
-    font-size: 11px;
+    font-size: 17px;
     justify-self: center;
     margin-top: -30px;
   }
   
   .id h2 {
     align-self: center;
-    margin: 0;
+    margin-top: -50px;
     padding: 0;
-    color: aqua;
   }
   
   .image {
@@ -52,18 +51,15 @@
   .image img {
     display: grid;
     justify-self: center;
-    margin-top: -10px;
+    margin-top: -50px;
     width: 130px;
     height: 130px;
     border-radius: 50%;
     border: 3px solid gray;
     padding: 3px;
     transition: 200ms;
+    margin-bottom: 10px;
   }
-  
-  /* .image img:hover {
-    scale: 1.1;
-  } */
   
   .buttons {
     display: grid;
@@ -107,8 +103,8 @@
   }
   
   .name {
-    color: blueviolet;
-    font-size: 18px;
+    font-size: 25px;
+    padding-bottom: 20px;
   }
   
   .dataContainer {
@@ -117,12 +113,13 @@
     align-content: center;
     width: 95%;
     height: 100px;
+    font-family: fantasy;
   }
   
   .data {
-    font-size: 14px;
-    color: gray;
-    margin-top: -40px;
+    font-size: 20px;
+    margin-top: -50px;
+    padding-top: 10px;
   }
   
   .Value {
@@ -130,14 +127,15 @@
   }
   
   .masInfo {
-    font-family: 'Orbitron';
-    font-size: 10px;
-    border: 0;
+    font-weight: bolder;
+    font-size: 12px;
     width: 70px;
     height: 30px;
     border-radius: 10px;
     color: aliceblue;
-    background-color: blueviolet;
+    border: 2px solid transparent;
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.24)) padding-box,
+    linear-gradient(45deg, #FF52E5, #F6D242) border-box;
     transition: 200ms;
     cursor: pointer;
   }

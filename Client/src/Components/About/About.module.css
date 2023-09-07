@@ -1,7 +1,9 @@
 .aboutContainer{
   background-color: rgba(0, 0, 0, 0.8);
   border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
   background: linear-gradient(black, black) padding-box,
+  linear-gradient(45deg, #FF52E5, #F6D242) border-box;
 }
 
 .grid {

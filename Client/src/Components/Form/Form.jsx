@@ -66,7 +66,7 @@ export default function Form({ login }) {
           </div>
           <div>
             <button type="submit" className={style.submit}>
-              Submit
+              Entrar
             </button>
           </div>
         </form>

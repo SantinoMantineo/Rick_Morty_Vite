@@ -6,6 +6,9 @@
     justify-self: center;
     align-self:flex-end;
     background-color: rgb(0, 0, 0);
+    border-bottom: 5px solid transparent;
+    background: linear-gradient(black, black) padding-box,
+    linear-gradient(45deg, #FF52E5, #F6D242) border-box;
   }
 
   .footerText{
