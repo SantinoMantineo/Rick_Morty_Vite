@@ -26,7 +26,7 @@
     width: 40px;
     height: 40px;
     align-content: center;
-    background-color: blueviolet;
+    background: -webkit-linear-gradient(45deg, #FF52E5, #F6D242) border-box;
     color: aliceblue;
     margin-left: 10px;
     border-radius: 50%;
@@ -43,35 +43,12 @@
     width: 27px;
   }
   
-  .music {
-    display: grid;
-    width: 40px;
-    height: 40px;
-    align-content: center;
-    background-color: rgb(135, 70, 196);
-    box-shadow: 0px 0px 5px violet;
-    color: aliceblue;
-    margin-left: 10px;
-    border-radius: 50%;
-    border: 0;
-  }
-  
-  .music:hover {
-    scale: 0.9;
-    background-color: violet;
-    box-shadow: 0px 0px 5px blueviolet;
-  }
-  
-  .music img {
-    width: 27px;
-  }
-  
   .random {
     display: grid;
     width: 40px;
     height: 40px;
     align-content: center;
-    background-color: blueviolet;
+    background: -webkit-linear-gradient(45deg, #FF52E5, #F6D242) border-box;
     color: aliceblue;
     margin-right: 10px;
     border-radius: 50%;
@@ -102,7 +79,7 @@
   }
   
   .favButton button {
-    background-color: rgb(135, 70, 196);
+    background: -webkit-linear-gradient(45deg, #FF52E5, #F6D242) border-box;
     box-shadow: 0px 0px 5px violet;
     border-radius: 50%;
     width: 40px;

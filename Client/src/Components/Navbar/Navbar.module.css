@@ -32,14 +32,15 @@
   }
   
   .homeButton {
-    color: aliceblue;
     margin-right: 10px;
     cursor: pointer;
-    color: blueviolet;
     align-self: baseline;
     text-decoration: none;
     transition: 200ms;
     margin-right: 30px;
+    background: -webkit-linear-gradient(45deg, #FF52E5, #F6D242) border-box;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
   }
   
   .homeButton:hover {
@@ -48,13 +49,14 @@
   }
   
   .aboutButton {
-    color: aliceblue;
     cursor: pointer;
-    color: blueviolet;
     margin-right: 10px;
     text-decoration: none;
     transition: 200ms;
     margin-right: 30px;
+    background: -webkit-linear-gradient(45deg, #FF52E5, #F6D242) border-box;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
   }
   
   .aboutButton:hover {
@@ -63,12 +65,13 @@
   }
   
   .logoutButton {
-    color: aliceblue;
     cursor: pointer;
-    color: fuchsia;
     margin-right: 10px;
     text-decoration: none;
     transition: 200ms;
+    background: -webkit-linear-gradient(45deg, #FF52E5, #F6D242) border-box;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
   }
   
   .logoutButton:hover {

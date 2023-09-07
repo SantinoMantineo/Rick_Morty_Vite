@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <div className={style.footer}>
         <footer>
-          <p>Santino Mantineo</p>
+          <p className={style.footerText}>Santino Mantineo</p>
         </footer>
       </div>
   )
