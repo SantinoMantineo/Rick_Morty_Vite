@@ -1,7 +1,5 @@
 const users = require("../utils/users")
-
-
-
+const {clearFavorites} = require("./handleFavorites")
 
 const login = (req, res)=>{
     const { email, password } = req.query;
@@ -10,6 +8,7 @@ const login = (req, res)=>{
 
     if(user){
         res.status(200).json({access: true})
+        clearFavorites(req, res);
     } else{
         res.status(200).json({access: false})
     }

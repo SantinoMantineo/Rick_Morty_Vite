@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 //Importaciones Redux
 import { connect, useSelector } from "react-redux";
-import { addFavorite, removeFavorite } from "../../redux/actions";
+import { addFavorite, removeFavorite } from "../../Redux/actions";
 //Importacion estilos
 import style from "./Card.module.css";
 

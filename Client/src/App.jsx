@@ -22,6 +22,7 @@ import style from "./App.module.css";
 import videoBg from "./assets/videoBG.mp4"
 
 function App() {
+  
   //Para manejar la validación y el inicio de sesion
 
   const navigate = useNavigate();
