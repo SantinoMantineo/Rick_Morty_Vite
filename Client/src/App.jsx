@@ -24,19 +24,19 @@ import videoBg from "./assets/videoBG.mp4"
 function App() {
   //Para manejar la validación y el inicio de sesion
 
-  const EMAIL = "santinomantineo@gmail.com";
-  const PASSWORD = "123123";
-
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
   const dispatch = useDispatch();
 
   function login(userData) {
-    if (userData.password === PASSWORD && userData.email === EMAIL) {
-      setAccess(true);
-      navigate("/home");
-    }
-  }
+    const { email, password } = userData;
+    const URL = 'http://localhost:3001/rickandmorty/login/';
+    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+       const { access } = data;
+       setAccess(data);
+       access && navigate('/home');
+    });
+ }
   //Redirecciona a la pagina de inicio si no se ha iniciado sesion
 
   useEffect(() => {

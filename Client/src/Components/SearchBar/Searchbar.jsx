@@ -4,7 +4,6 @@ import style from "./SearchBar.module.css";
 import searchIcon from "../../assets/search.png";
 import randomIcon from "../../assets/random.png";
 import favIcon from "../../assets/fav.png";
-import musicIcon from "../../assets/music.png";
 
 export default function SearchBar({ onSearch }) {
   const [id, setId] = useState("");

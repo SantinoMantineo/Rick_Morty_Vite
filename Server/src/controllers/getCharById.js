@@ -1,28 +1,35 @@
-const axios = require('axios');
+const axios = require("axios");
+const URL = "https://rickandmortyapi.com/api/character";
 
-const getCharById = (res, id)=>{
-    axios(`https://rickandmortyapi.com/api/character/${id}`)
+function getCharById(req, res) {
+  //(req, res)
+  const { id } = req.params;
+
+  axios(`${URL}/${id}`)
     .then((response) => response.data)
-    .then(({ name, gender, species, origin, image, status, location}) => {
-        const character = { 
+    .then((data) => {
+      const character = {
         id: id,
-        name: name, 
-        gender: gender, 
-        species: species,  
-        origin: origin, 
-        image: image, 
-        status: status,
-        location: location
-     }
-     return res
-     .writeHead(200, { "Content-type": "application/json"})
-     .end(JSON.stringify(character))
+        name: data.name,
+        gender: data.gender,
+        species: data.species,
+        origin: data.origin?.name,
+        image: data.image,
+        status: data.status,
+      };
+
+      /* res
+        .writeHead(200, { "content-type": "application/json" })
+        .end(JSON.stringify(character)); */
+
+      character.name;
+      res.status(200).json(character);
     })
-    .catch(error =>{
-        return res
-        .writeHead(500, {"Content-type": "text/plain"})
-        .end(error.message)
-    })
+    .catch((error) => {
+      /* res.writeHead(500, { "content-type": "text/plain" }).end(error.message); */
+
+      res.status(500).json({ message: error.message });
+    });
 }
 
 module.exports = {getCharById};
