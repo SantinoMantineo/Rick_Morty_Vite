@@ -57,7 +57,7 @@ function App() {
   const [characters, setCharacters] = useState([]);
 
   const closeHandler = (id) => {
-    let deleted = characters.filter((character) => character.id !== Number(id));
+    let deleted = characters.filter((character) => character.id !== id);
 
     dispatch(removeFavorite(id)); //Remueve el personaje de favoritos en Redux
     setCharacters(deleted); // Actualiza la lista de personajes
