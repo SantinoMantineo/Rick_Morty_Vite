@@ -3,6 +3,7 @@
     height: 100px;
     margin-bottom: -120px;
     z-index: 1;
+    margin-right: 2%;
   }
   
   .container {
@@ -17,7 +18,7 @@
   .animationCircle {
     position: absolute;
     z-index: 1;
-    top: 31.6%;
+    top: 31.8%;
     left: 35.5%;
     border-radius: 50%;
     height: 550px;
