@@ -29,14 +29,19 @@ function App() {
   const [access, setAccess] = useState(false);
   const dispatch = useDispatch();
 
-  function login(userData) {
-    const { email, password } = userData;
-    const URL = 'http://localhost:3001/rickandmorty/login/';
-    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
-       const { access } = data;
-       setAccess(data);
-       access && navigate('/home');
-    });
+  async function login(userData) {
+    try{
+      const { email, password } = userData;
+      const URL = 'http://localhost:3001/rickandmorty/login/';
+      const {data} = await axios.get(URL, { params: { email, password,}});
+
+         const { access } = data;
+         setAccess(data);
+         access && navigate('/home');
+         
+      } catch(error){
+        console.log("Error:", error);
+    }
  }
   //Redirecciona a la pagina de inicio si no se ha iniciado sesion
 
@@ -66,35 +71,31 @@ function App() {
 
   //Para manejar la busqueda y cargar la Card
 
-  const searchHandler = (id) => {
+  async function searchHandler(id) {
     if (id > 826) {
       window.alert("¡Solo hay 826 IDs de personajes!");
       return;
     }
+  
+    const idDuplicated = characters.some((character) => character.id === id);
 
-    const isIdLoaded = characters.some(
-      (character) => character.id === Number(id)
-    );
-    if (isIdLoaded) {
+    if (idDuplicated) {
       window.alert("¡Ese ID ya está cargado!");
       return;
     }
-
-    axios(`http://localhost:3001/rickandmorty/character/${id}`)
-      .then(({ data }) => {
-        if (data.name) {
-          setCharacters((oldChars) => [...oldChars, data]); //Agrega el personaje a la lista
-        } else {
-          window.alert("¡Debe ingresar un ID!");
-        }
-      })
-
-      .catch((error) => {
-        console.log("Error:", error);
-
-        window.alert("Ocurrió un error al realizar la solicitud");
-      });
-  };
+  
+    try {
+      const { data } = await axios(`http://localhost:3001/rickandmorty/character/${id}`);
+      if (data.name) {
+        setCharacters((oldChars) => [...oldChars, data]); // Agrega el personaje a la lista
+      } else {
+        window.alert("¡Debe ingresar un ID!");
+      }
+    } catch (error) {
+      console.log("Error:", error);
+      window.alert("Ocurrió un error al realizar la solicitud");
+    }
+  }
 
   return (
     <div className={style.App}>
