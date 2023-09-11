@@ -7,7 +7,7 @@
     border: 5px solid transparent;
     background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.24)) padding-box,
     linear-gradient(45deg, #FF52E5, #F6D242) border-box;
-    margin-top: 195px;
+    margin-top: 315px;
     transition: 200ms;
     z-index: 1;
   }

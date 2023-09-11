@@ -12,9 +12,6 @@ export default function LandingPage({ login }) {
       <span></span>
       <span></span>
     </div>        
-    <div className={style.logo}>
-        <img src={Logo}></img>
-      </div>
     <div className={style.container}>
         <Form login={login}></Form>
     </div>
