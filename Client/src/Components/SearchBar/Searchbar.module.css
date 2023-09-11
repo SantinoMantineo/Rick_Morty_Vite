@@ -15,11 +15,21 @@
     font-size: 14px;
     align-self: center;
     border-radius: 5px;
-    background-color: rgb(245, 245, 245);
+    background: rgb(24,8,25);
+    background: linear-gradient(90deg, rgba(24,8,25,1) 0%, rgba(124,42,121,1) 12%, rgba(247,94,185,1) 34%, rgba(250,157,133,1) 56%, rgba(249,176,109,1) 72%, rgba(255,218,70,1) 93%);
     border: 0;
     outline: none;
   }
-  
+
+  .input{
+    color: white;
+    padding-left: 20px;
+  }
+
+  ::placeholder{
+    color: white;
+    text-align: center;
+  }
   .search {
     display: grid;
     width: 40px;

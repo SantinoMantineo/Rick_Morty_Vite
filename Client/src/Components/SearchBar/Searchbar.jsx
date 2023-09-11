@@ -35,6 +35,7 @@ export default function SearchBar({ onSearch }) {
         <img src={randomIcon} />
       </button>
       <input
+        className={style.input}
         type="search"
         placeholder="Ingrese un ID"
         value={id}
