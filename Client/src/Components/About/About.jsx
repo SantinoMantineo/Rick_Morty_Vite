@@ -8,7 +8,7 @@ import Github from '../../assets/github.png'
 export default function About() {
   return (
     <div className={style.aboutContainer}>
-      <h2>ABOUT ME</h2>
+      <h2>¿QUIEN SOY?</h2>
       <div className={style.grid}>
         <div className={style.aboutImg}>
           <div>
@@ -21,16 +21,23 @@ export default function About() {
           </div>
         </div>
         <div className={style.aboutP}>
-          <h2>¿Quien Soy?</h2>
           <p className={style.P}>
             I am a passionate designer and front-end
-            programmer dedicated to crafting visually 
-            stunning and user-friendly interfaces.
+            programmer dedicated to crafting 
+            <br></br>visually 
+            stunning and user-friendly
+            <br></br>interfaces.
             <br></br>
             <br></br>
             I am highly motivated to expand 
-            my skills and stay current with 
-            the ever-evolving features and technologies.
+            my skills
+            <br></br>and stay current with 
+            the ever-evolving
+            <br></br>features and technologies.
+            <br></br>
+            <br></br>
+            If you would like to see some of my work
+            <br></br>just click the icons on the left!
           </p>
         </div>
       </div>
