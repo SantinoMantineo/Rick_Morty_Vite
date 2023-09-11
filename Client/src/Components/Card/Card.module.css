@@ -113,7 +113,6 @@
     align-content: center;
     width: 95%;
     height: 100px;
-    font-family: fantasy;
   }
   
   .data {
@@ -127,8 +126,6 @@
   }
   
   .masInfo {
-    font-weight: bolder;
-    font-size: 12px;
     width: 70px;
     height: 30px;
     border-radius: 10px;
