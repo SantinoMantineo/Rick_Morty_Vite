@@ -20,8 +20,6 @@ function deleteFav(req, res) {
 
 function clearFavorites(req, res) {
   myFavorites = []; // Borra todos los personajes favoritos
-
-  res.status(200).json({ message: "Personajes favoritos limpiados exitosamente" });
 }
 
 module.exports = { postFav, deleteFav, clearFavorites };
