@@ -1,7 +1,6 @@
 const app = require('../src/app');
 const session = require('supertest');
 const agent = session(app);
-const login = require("../src/controllers/login")
 
 describe("_Test de RUTAS_", ()=>{
     describe('GET /rickandmorty/character/:id', () => {
