@@ -8,11 +8,11 @@
     background-color: rgb(0, 0, 0);
     border-bottom: 5px solid transparent;
     background: linear-gradient(black, black) padding-box,
-    linear-gradient(45deg, #FF52E5, #F6D242) border-box;
+    linear-gradient(45deg, #0011ff, #00ff37) border-box;
   }
 
   .footerText{
-    background: -webkit-linear-gradient(45deg, #FF52E5, #F6D242) border-box;
+    background: -webkit-linear-gradient(45deg, #0011ff, #00ff37) border-box;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     font-weight: bolder;

@@ -8,7 +8,7 @@ import Github from '../../assets/github.png'
 export default function About() {
   return (
     <div className={style.aboutContainer}>
-      <h2>¿QUIEN SOY?</h2>
+      <h2>¿WHO AM I?</h2>
       <div className={style.grid}>
         <div className={style.aboutImg}>
           <div>

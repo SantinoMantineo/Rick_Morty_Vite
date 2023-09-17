@@ -15,7 +15,9 @@ export default function Navbar({ onSearch, onLogout }) {
       <SearchBar onSearch={onSearch} className={style.search}/>
       <div className={style.buttons}>
         <Link to="/about" className={style.aboutButton}>
-          <h3>ABOUT</h3>
+          <h3>
+            ABOUT
+          </h3>
         </Link>
         <h3 onClick={onLogout} className={style.logoutButton}>
           LOGOUT
