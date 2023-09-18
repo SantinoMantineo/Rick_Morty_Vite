@@ -65,8 +65,6 @@
   
   .random:hover {
     scale: 0.9;
-    background-color: violet;
-    box-shadow: 0px 0px 5px blueviolet;
   }
   
   .random img {
@@ -88,7 +86,6 @@
   
   .favButton button {
     background: linear-gradient(45deg, #0011ff, #00ff37) border-box;
-    box-shadow: 0px 0px 5px violet;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -98,8 +95,6 @@
   
   .favButton button:hover {
     scale: 0.9;
-    background-color: violet;
-    box-shadow: 0px 0px 5px blueviolet;
   }
   
   .favButton button img {
