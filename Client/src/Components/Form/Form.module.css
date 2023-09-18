@@ -1,27 +1,29 @@
 .container {
     display: grid;
+    position: fixed;
     justify-self: center;
     width: 300px;
-    height: 400px;
+    height: 420px;
     border-radius: 20px;
     border: 5px solid transparent;
     background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.24)) padding-box,
-    linear-gradient(45deg, #FF52E5, #F6D242) border-box;
-    margin-top: 315px;
+    linear-gradient(45deg, #0011ff, #00ff37) border-box;
+    margin-top: 303px;
     transition: 200ms;
     z-index: 1;
   }
   
   .container:hover {
-    box-shadow: 3px 3px 20px #FF52E5, -3px -3px 20px #F6D242;
+    box-shadow: 3px 3px 20px #0011ff, -3px -3px 20px #00ff37;
   }
   
   h2 {
-    background: -webkit-linear-gradient(45deg, #FF52E5, #F6D242) border-box;
+    background: -webkit-linear-gradient(45deg, #0011ff, #00ff37) border-box;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     margin-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    font-family: 'Bungee Shade', cursive;
   }
   
   input {
@@ -51,15 +53,18 @@
   .submit {
     border: 0;
     font-weight: bolder;
-    font-size: x-large;
+    font-size: 20px;
     width: auto;
     height: auto;
-    border-radius: 10px;
-    background-image: url(../../assets/background.jpg);
-    color: aliceblue;
+    background: -webkit-linear-gradient(45deg, #69ff96, #00ff37) border-box;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    box-shadow: 2px 2px 4px 2px #00ff37;
+    color: #00ff37;
     transition: 200ms;
-    margin-top: 40px;
+    margin-top: 35px;
     margin-bottom: 25px;
+    font-family: 'Bungee Shade', cursive;
   }
   
   .submit:hover {

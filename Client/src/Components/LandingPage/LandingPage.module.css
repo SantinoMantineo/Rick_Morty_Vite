@@ -15,8 +15,8 @@
     width: 550px;
     -webkit-animation: rotate 5s normal linear infinite;
     animation: rotate 5s normal linear infinite;
-    background: linear-gradient(rgb(239, 243, 0), rgb(198, 0, 248)) padding-box,
-    linear-gradient(45deg, #FF52E5, #F6D242) border-box;
+    background: linear-gradient(#0011ff, #00ff37) padding-box,
+    linear-gradient(45deg, #0011ff, #00ff37) border-box;
   }
   
   .animationCircle span:nth-of-type(1) {
@@ -43,7 +43,7 @@
     right: 10px;
     bottom: 10px;
     background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.24)) padding-box,
-    linear-gradient(45deg, #FF52E5, #F6D242) border-box;
+    linear-gradient(45deg, #0011ff, #00ff37) border-box;
     border-radius: 50%;
   }
   

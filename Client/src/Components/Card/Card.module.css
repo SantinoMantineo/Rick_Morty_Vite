@@ -104,9 +104,9 @@
   }
   
   .name {
-    font-size: 25px;
+    font-size: 20px;
     padding-bottom: 20px;
-    background: -webkit-linear-gradient(45deg, #15ff00, #00ff37b7) border-box;
+    background: -webkit-linear-gradient(45deg, #9c32ff, #00ff37) border-box;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
   }

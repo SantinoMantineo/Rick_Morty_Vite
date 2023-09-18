@@ -6,7 +6,6 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     width: 450px;
     height: 50px;
-    border-radius: 10px;
   }
   
   .searchBar input {
@@ -14,28 +13,28 @@
     height: 35px;
     font-size: 14px;
     align-self: center;
-    border-radius: 5px;
-    background: rgb(24,8,25);
-    background: linear-gradient(90deg, rgba(24,8,25,1) 0%, rgba(124,42,121,1) 12%, rgba(247,94,185,1) 34%, rgba(250,157,133,1) 56%, rgba(249,176,109,1) 72%, rgba(255,218,70,1) 93%);
-    border: 0;
-    outline: none;
+    box-shadow: 2px 1px 2px 2px #00ff37;
+    background-image: url(../../assets//BG3DD.png);
   }
 
   .input{
     color: white;
-    padding-left: 20px;
+    padding-left: 15%;
+    padding-top: 8px;
+    font-family: 'Bungee Shade', cursive;
   }
 
   ::placeholder{
     color: white;
-    text-align: center;
+    padding-left: 15px;
+    font-family: 'Bungee Shade', cursive;
   }
   .search {
     display: grid;
     width: 40px;
     height: 40px;
     align-content: center;
-    background: -webkit-linear-gradient(45deg, #FF52E5, #F6D242) border-box;
+    background: linear-gradient(45deg, #0011ff, #00ff37) border-box;
     color: aliceblue;
     margin-left: 10px;
     border-radius: 50%;
@@ -44,8 +43,8 @@
   
   .search:hover {
     scale: 0.9;
-    background-color: violet;
-    box-shadow: 0px 0px 5px blueviolet;
+    background-color: #00ff37;
+    box-shadow: 0px 0px 5px #00ff37;
   }
   
   .search img {
@@ -57,7 +56,7 @@
     width: 40px;
     height: 40px;
     align-content: center;
-    background: -webkit-linear-gradient(45deg, #FF52E5, #F6D242) border-box;
+    background: linear-gradient(45deg, #0011ff, #00ff37) border-box;
     color: aliceblue;
     margin-right: 10px;
     border-radius: 50%;
@@ -88,7 +87,7 @@
   }
   
   .favButton button {
-    background: -webkit-linear-gradient(45deg, #FF52E5, #F6D242) border-box;
+    background: linear-gradient(45deg, #0011ff, #00ff37) border-box;
     box-shadow: 0px 0px 5px violet;
     border-radius: 50%;
     width: 40px;

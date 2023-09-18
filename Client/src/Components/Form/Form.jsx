@@ -40,7 +40,7 @@ export default function Form({ login }) {
   return (
     <>
       <div className={style.container}>
-        <h2>Inicia sesión</h2>
+        <h2>New Game</h2>
         <form onSubmit={handleSubmit}>
           <div className={style.email}>
             <input
@@ -66,7 +66,7 @@ export default function Form({ login }) {
           </div>
           <div>
             <button type="submit" className={style.submit}>
-              Entrar
+              PRESS START
             </button>
           </div>
         </form>
