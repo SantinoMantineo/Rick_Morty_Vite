@@ -9,7 +9,6 @@ import { clearFavorites } from "./Redux/actions";
 //Importaciones componentes
 import Cards from "./components/Cards/Cards";
 import Navbar from "./components/Navbar/Navbar";
-import ImageP from "./components/ImageP/ImageP";
 import Footer from "./components/Footer/Footer";
 //Importaciones vistas
 import NotFound from "./components/Error/NotFound";
@@ -143,20 +142,6 @@ function App() {
               <>
                 <Navbar onSearch={searchHandler} onLogout={logout} />
                 <About />
-                <Footer />
-              </>
-            ) : (
-              <Navigate to="/" replace />
-            )
-          }
-        />
-        <Route
-          path="/image/:id"
-          element={
-            access ? (
-              <>
-                <Navbar onSearch={searchHandler} onLogout={logout} />
-                <ImageP />
                 <Footer />
               </>
             ) : (

@@ -73,6 +73,8 @@
     -webkit-background-clip: text;
     box-shadow: 2px 1px 2px 2px #00ff37;
     text-decoration: none;
+    padding-right: 10px;
+    padding-left: 7px;
   }
   
   .aboutButton:hover {
@@ -87,7 +89,9 @@
     background: -webkit-linear-gradient(45deg, #0011ff, #00ff37) border-box;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    box-shadow: 2px 1px 2px 2px #00ff37 
+    box-shadow: 2px 1px 2px 2px #00ff37;
+    padding-right: 10px;
+    padding-left: 6px;
   }
   
   .logoutButton:hover {
