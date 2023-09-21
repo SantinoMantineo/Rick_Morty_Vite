@@ -1,4 +1,4 @@
-# **💪 HW3 | Sequelize Part 1 - Integration**
+# **💪 HW3 | Sequelize Part 2 - Integration**
 
 ## **🕒 DURACIÓN ESTIMADA**
 
@@ -16,7 +16,7 @@ XX minutos
 
 ## **📝 INTRODUCCIÓN**
 
-En esta homework pondremos en práctica todo lo que hemos aprendido hasta ahora sobre Sequelize. Aplicaremos nuestros conocimientos para conectar nuestro código con una nueva base de datos para nuestro proyecto de Rick & Morty.
+En esta homework nos encargaremos de terminar de integrar una base de datos en nuestro proyecto de Rick and Morty componiendo nuevos controladores.
 
 </br >
 
@@ -24,227 +24,175 @@ En esta homework pondremos en práctica todo lo que hemos aprendido hasta ahora 
 
 ## **📋 INSTRUCCIONES**
 
-### **👩‍💻 EJERCICIO 01 | Dependencias & Config**
+Para esta primera homework ya no necesitaremos algunos archivos y carpetas, por lo que te invitamos a eliminar los siguiente:
 
-Lo primero que deberás hacer es instalar las siguientes dependencias en tu **`package.json`**:
-
--  **sequelize**
--  **pg**
--  **dotenv**
-
-Una vez las hayas instalado tendrás que crear la base de datos en PostgreSQL. Para crear la base de datos puedes optar por utilizar directamente **`pgAdmin`**. En el caso de que quieras hacerlo por terminal sigue estos pasos:
-
-> ⚠️ [**IMPORTANTE**]: es muy importante que el nombre de la base de datos sea: **`rickandmorty`**. En el caso de no cumplir esto la homework puede fallar.
-
-1. Abre la terminal **`SQL Shell (psql)`** e ingresa tu información personal.
-
-2. Crea una base de datos con el nombre **`rickandmorty`** utilizando el comando que ya conoces.
-
-   Puedes verificar que se haya creado correctamente con el comando:
-
-   ```SQL
-      \l
-   ```
+-  Caperta **`utils`** con todo lo que tiene dentro.
+-  Archivo **`/controllers/handleFavorites.js`**.
+-  Archivo **`/controllers/login.js`**.
 
 <br />
 
+### **👩‍💻 EJERCICIO 01 | POST USER**
+
+Dirígete a tu carpeta **controllers**:
+
+1. Crea un nuevo archivo con el nombre **`postUser.js`**.
+
+2. Dentro de este archivo tendrás que importar tu modelo **User**.
+
+> [**NOTA**]: deberás importar este modelo de tu archivo **`DB_connection`** ya que desde allí está activo dentro de tu base de datos.
+
+3. Crea una función llamada **`postUser`** y expórtala. Esta función debe recibir por parámetro los objetos **`req`** y **`res`**. Además, esta función es asincrónica, ¡por lo que deberás trabajar con promesas o async await!
+
+4. Dentro de la función deberás recibir un **email** y una **password** por **`Body`**.
+
+5. Una vez recibido, deberás validar que realmente hayas recibido ambos y que no sean, por ejemplo, un string vacío. En el caso de no recibir alguno de los dos deberás responder con un **`status 400`** y devolver un mensaje que diga: **"_Faltan datos_"**.
+
+6. En el caso de si recibir ambos datos deberás guardarlos dentro de tu modelo. Una vez realizado responde con el usuario guardado.
+
+> [**NOTA**]: puedes utilizar el método **`findOrCreate`**.
+
+> [**NOTA**]: en el caso de haber un error responde con **`status 500`** y el mensaje del error.
+
+</br>
+
 ---
 
-### **👩‍💻 EJERCICIO 02 | ENV**
+### **👩‍💻 EJERCICIO 02 | LOGIN**
 
-Dirígete a la raíz de tu proyecto Back-End. Allí deberás crea un archivo llamado **`.env`**. En su interior debes escribir lo siguiente:
+Ahora si crearemos un controlador que valide la información de nuestra base de datos. Elimina por completo la carpeta **utils**.
+
+1. Crea un archivo llamado **`login.js`**. Dentro de este archivo deberás importar tu modelo **User**.
+
+2. Crea una función llamada **`login`** la cual reciba por parámetro los objetos **`req`** y **`res`**. No olvides exportarla.
+
+3. Recibiras por **`Query`** los datos **email** y **password**.
+
+4. En el caso de no recibir alguno de los datos, responde con un **`status 400`** y el mensaje **"_Faltan datos_"**.
+
+5. Si ambos datos llegan correctamente tendrás que buscar aquel usuario que tenga el mismo email que recibiste anteriormente. En el caso de no encontrarlo responde con un **`status 404`** y el mensaje **"_Usuario no encontrado_"**.
+
+6. En el caso de encontrar a un usuario con ese mismo email solo tendrás ahora que comparar si su **password** es igual a la **password** que recibiste anteriormente. En el caso de no serlo responde con un **`status 403`** y un mensaje que diga **"_Contraseña incorrecta_"**.
+
+7. En el caso de que las contraseñas si coincidan, responde con el objeto:
 
 ```js
-DB_USER=postgres
-DB_PASSWORD= ---> // ¡Aquí va tu contraseña!
-DB_HOST=localhost
+{
+   access: true;
+}
 ```
 
-<br />
+> [**NOTA**]: en el caso de haber un error responde con **`status 500`** y el mensaje del error.
+
+</br>
 
 ---
 
-### **👩‍💻 EJERCICIO 03 | DB Connection**
+### **👩‍💻 EJERCICIO 03 | POST FAV**
 
-Ya tenemos todo lo necesario para comenzar a trabajar. Comenzaremos por conectar el código con nuestra base de datos. Para esto:
+1. Crea un nuevo archivo llamado **`postFav.js`**. Dentro de este archivo deberás importar tu modelo **Favorite**.
 
-1. Lleva el archivo [**DB_connection**](./DB_connection.js) a tu carpeta **src**.
+2. Crea una función llamada **`postFav`** la cual reciba por parámetro los objetos **`req`** y **`res`**.
 
-2. Dentro de él encontrás el siguiente paso a seguir.
+3. Deberás recibir las propiedades **name**, **origin**, **status**, **image**, **species** y **gender** por **`Body`**.
 
-> [**NOTA**]: revisa el código comentado en la sección **`Ejercicio 03`**.
+4. Valida que todos los datos estén llegando correctamente. Caso contrario responde con un **`status 401`** y el mensaje **"_Faltan datos_"**.
 
-<br />
+5. Si todos los datos llegan como corresponde, guarda tu personaje en la base de datos.
 
----
+6. Una vez guardado, busca todos los personajes favoritos guardados en tu base de datos y responde con ese arreglo.
 
-### **👩‍💻 EJERCICIO 04 | Models**
+> [**NOTA**]: puedes utilizar el método **`findOrCreate`**.
 
-Llegó el momento de crear nuestros modelos. LLeva la carptea [**models**]("./models) a tu carpeta **src**. Dentro de esta carpeta encontrarás dos archivos: **`User`** y **`Favorite`**. Tendrás que agregar las propiedades y validaciones correspondiente en cada uno de los modelos.
+> [**NOTA**]: en el caso de haber un error responde con **`status 500`** y el mensaje del error.
 
-A continuación te dejamos las propiedades de cada modelo junto con sus validaciones.
-
-<div style="display: flex; position: relative; height: 45vh; overflow: hidden;">
-
-<div style="position: absolute; top: 3vh; left: 15vw;">
-
-### **USER**
-
-<details>
-   <summary>id</summary>
-   <ul>
-      <li>dataType: integer</li>
-      <li>allowNull: false</li>
-      <li>primaryKey: true</li>
-   </ul>
-</details>
-<details>
-   <summary>email</summary>
-   <ul>
-      <li>dataType: string</li>
-      <li>allowNull: false</li>
-      <li>isEmail: true</li>
-   </ul>
-</details>
-<details>
-   <summary>password</summary>
-   <ul>
-      <li>dataType: string</li>
-      <li>allowNull: false</li>
-   </ul>
-</details>
-
-</div>
-
-<div style="position: absolute; top: 3vh; right: 15vw; width: 20vw;">
-
-### **FAVORITE**
-
-<details>
-   <summary>id</summary>
-   <ul>
-      <li>dataType: integer</li>
-      <li>allowNull: false</li>
-      <li>primaryKey: true</li>
-   </ul>
-</details>
-<details>
-   <summary>name</summary>
-   <ul>
-      <li>dataType: string</li>
-      <li>allowNull: false</li>
-   </ul>
-</details>
-<details>
-   <summary>status</summary>
-   <ul>
-      <li>dataType: Enum (Alive - Dead - unknown)</li>
-      <li>allowNull: false</li>
-   </ul>
-</details>
-<details>
-   <summary>species</summary>
-   <ul>
-      <li>dataType: string</li>
-      <li>allowNull: false</li>
-   </ul>
-</details>
-<details>
-   <summary>gender</summary>
-   <ul>
-      <li>dataType: Enum (Female - Male - Genderless - unknown)</li>
-      <li>allowNull: false</li>
-   </ul>
-</details>
-<details>
-   <summary>origin</summary>
-   <ul>
-      <li>dataType: string</li>
-      <li>allowNull: false</li>
-   </ul>
-</details>
-<details>
-   <summary>image</summary>
-   <ul>
-      <li>dataType: string</li>
-      <li>allowNull: false</li>
-   </ul>
-</details>
-
-</div>
-
-</div>
-
-<br />
+</br>
 
 ---
 
-### **👩‍💻 EJERCICIO 05 | Instanciar Modelos**
+### **👩‍💻 EJERCICIO 04 | DELETE FAV**
 
-Ya tenemos nuestra conexión a la base de datos y nuestros modelos creados. Lo único que nos queda por hacer es que cada vez que levantemos el proyecto, estos modelos se guarden en la base de datos. Para esto:
+1. Crea un nuevo archivo con el nombre **`deleteFav.js`**. Dentro de este archivo tendrás que importar tu modelo **Favorite**.
 
-1. Dirígete al archivo **`DB_connection`**. En este archivo importa los dos modelos que creaste previamente. Asegúrate de importalos con el nombre **"`FavoriteModel`"** y **"`UserModel`"**.
+2. Crea una función con el nombre **`deleteFav`** y expórtala. Esta función debes recibir por parámetro los objetos **`req`** y **`res`**.
 
-2. Luego de importarlos tendrás que ejecutar cada uno, pasándoles como argumento la instancia de sequelize que se encuentra más arriba.
+3. Recibirás un **id** por parámetro. Tendrás que eliminar este personaje de tu tabla de favoritos.
 
-Por ejemplo, si tuvieras un modelo llamado **Henry** deberías hacer lo siguiente:
+4. Finalmente responde con una arreglo que contenga a todos tus personajes favoritos.
 
-```js
-HenryModel(sequelize);
-```
+> [**NOTA**]: puedes utilizar el query: **`destroy`**.
 
-> [**NOTA**]: 👀 revisa que en el archivo hay un espacio comentado para que realices este ejercicio.
+> [**NOTA**]: en el caso de haber un error responde con **`status 500`** y el mensaje del error.
 
-<br />
+</br>
 
 ---
 
-### **👩‍💻 EJERCICIO 06 | RELATIONS**
+### **👩‍💻 EJERCICIO 05 | Update routes**
 
-Ahora tendrás que relacionar tus modelos. Si nos ponemos a pensar, un usuario puede tener muchos personajes favoritos. Y un personaje puede ser el favorito de muchos usuarios. ¡Esto quiere decir que la relación debe ser de muchos a muchos!
+Dirígete a tu archivo **`/routes/index.js`**. Dentro de este tendrás que importar tus nuevos controladores y aplicarlos en las rutas correspondientes. Las nuevas rutas deben ser las siguientes:
 
-1. Dirígete al archivo **`DB_connection`** y relaciona tus modelos. La tabla intermedia debe llamarse **`user_favorite`**.
+-  **GET** **`/login`**
+-  **POST** **`/login`**
+-  **POST** **`/fav`**
+-  **DELETE** **`/fav/:id`**
 
-2. Una vez los hayas relacionado, exporta cada modelo de forma individual.
+> [**NOTA**]: la única ruta que no se modifica es **`getCharById`**.
 
-> [**NOTA**]: 👀 revisa que en el archivo hay un espacio comentado para que realices este ejercicio.
-
-3. Para terminar dirígete a tu archivo **`index.js`** e importa la varaible **`conn`** de tu archivo **`DB_connection`**. Una vez la hayas importado, ¡sincroniza sequelize con tu base de datos antes que se levante el servidor!
-
-   ```js
-   const { conn } = require('./DB_connection');
-   ```
-
-<br />
+</br>
 
 ---
 
-<div style="background-color: #343434; padding: 2vw;">
+### **👩‍💻 EJERCICIO 06 | Usuario de prueba**
 
-## **😼 BREAK 😼**
+Antes de ir a probar nuestra aplicación tendremos que crear un usuario en nuestra base de datos.
 
-En este momento ya deberíamos de poder levantar el proyecto y que todo esté funcionando correctamente. Para esto ejecuta el comando:
+Lo normal es que en nuestro Front-End exista un formulario **`sign up`** o **`registrate`**, pero nosotros no tenemos un (aún 😏).
 
-```bash
-   npm start
-```
+Tendremos que crear un usuario manualemente. Para esto abre tu **Cliente API** favorito. Puede ser, por ejemplo:
 
-<div align="center" >
-   <img src="./assets/workInProgress.png" alt="" />
-</div>
+-  [**Thunder Client**](https://www.thunderclient.com/)
+-  [**Insomnia**](https://www.postman.com/)
+-  [**Postman**](https://insomnia.rest/download)
 
-</div>
+1. Has un request de tipo **POST** a la ruta **`http://localhost:3001/rickandmorty/login`**.
 
-<br />
+2. Tendrás que enviar por **BODY** los datos: **`email`** y **`password`**.
+
+</br>
 
 ---
-
-## **🔎 Recursos adicionales**
-
--  Documentación [**API Rick and Morty**](https://rickandmortyapi.com/documentation/#get-all-characters)
-
--  Documentación [**Sequelize**](https://sequelize.org/docs/v6/)
 
 <div align="center">
-   <img src="./assets/rickandmorty.jpg" alt="" width="800px" />
+
+## **😁 ¡FELICITACIONES! 😁**
+
 </div>
+
+😎 Acabas de finalizar la homework integradora del bootcamp. Tu aplicación está lista para ser utilizada.
+
+🤓 Por supuesto que hay muchas cosas que se pueden mejorar y cosas nuevas que se pueden crear. Con todo lo que has aprendido hasta ahora ya eres capaz de continuar, con un poco de esfuerzo y autonomía, mejorando este proyecto.
+
+🔎 Ahora queremos invitarte a que hagas un deploy de tu proyecto. Te compartimos nuestra cápsula de deploy...
+
+<div align="center">
+   <a href="https://rise.articulate.com/share/YKtorcVy0_ch_T7ETfudX4olPcYcXE6o#/">
+      <img src="./logo.png" alt="" width="50%" style="border-radius: 20vw;" />
+   </a>
+</div>
+
+> [**NOTA**]: has click sobre la imagen.
+
+</br>
+
+---
+
+## **📌 EXTRA CREDIT**
+
+1. El primer ejercicio **`extra`** que te invitamos a desarrollar es un formulario del lado Front-End que le permita a un usuario registrarse en tu aplicación. Estos datos se guardarán automáticamente en la base de datos.
+
+Este es un gran desafío, porque no solo tendrás que conectar tu Servidor con el Cliente, sino que también tendrás que pensar en una lógica del lado Front-End para que el usuario pueda cambiar de vista para poder logearse, y sin que aún tenga acceso a la app.
+
+</br >
+
+2. Algunos de los tests que realizaste en el módulo 3 ya no te serviran con estas nuevas rutas. Por lo tanto puedes intentar volver a realizar los tests, pero con las nuevas rutas.
